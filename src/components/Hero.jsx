@@ -38,7 +38,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* LEFT: text only */}
+        {/* LEFT */}
         <div className="flex-1 text-left">
           <motion.p
             className="text-orange-400 font-semibold text-sm sm:text-base mb-3"
@@ -48,7 +48,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-6"
+            className="text-4xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight mb-6"
             variants={itemVariants}
           >
             I Build Digital
@@ -57,16 +57,17 @@ const Hero = () => {
               Experiences
             </span>
             <br />
-            That Inspire
+            That Actually Ship
           </motion.h1>
 
           <motion.p
             className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xl leading-relaxed mb-8"
             variants={itemVariants}
           >
-            Final-year Computer Science student crafting production-grade full-stack
-            applications with smooth animations, AI integration, and zero bloat.
-            Building the next generation of SaaS products.
+            Final-year Computer Science student learning and building real-world
+            full-stack applications using modern web technologies. I enjoy
+            turning ideas into clean, reliable products with thoughtful UI,
+            scalable APIs, and smooth animations.
           </motion.p>
 
           <motion.div
@@ -92,101 +93,75 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* RIGHT: single profile card */}
+        {/* RIGHT */}
         <motion.div
-          className="flex-1 flex justify-center lg:justify-end"
-          variants={itemVariants}
+  className="relative w-full max-w-sm"
+  whileHover={{ scale: 1.02, translateY: -4 }}
+  transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+>
+  {/* soft glow */}
+  <div className="absolute -inset-3 bg-gradient-to-tr from-orange-500/40 via-red-500/30 to-orange-300/30 rounded-3xl blur-3xl opacity-40" />
+
+  {/* card */}
+  <div className="relative rounded-3xl bg-white/5 border border-orange-500/25 backdrop-blur-xl p-7 sm:p-8">
+    {/* name */}
+    <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">
+      Yash Shrivastava
+    </h2>
+
+    {/* role */}
+    <p className="text-sm sm:text-base text-orange-300 font-medium mb-5">
+      Full-Stack Web Developer (Fresher)
+    </p>
+
+    {/* divider */}
+    <div className="w-12 h-[2px] bg-orange-500/60 rounded-full mb-5" />
+
+    {/* focus */}
+    <p className="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">
+      Currently focused on building clean, real-world full-stack applications
+      and strengthening my fundamentals in frontend, backend, and problem-solving.
+    </p>
+
+    {/* focus points */}
+    <ul className="space-y-2 text-xs sm:text-sm text-gray-300 mb-6">
+      <li>• React & modern frontend patterns</li>
+      <li>• REST APIs & backend logic</li>
+      <li>• Writing clean, maintainable code</li>
+    </ul>
+
+    {/* tech chips */}
+    <div className="flex flex-wrap gap-2 mb-6">
+      {['React', 'Node.js', 'MongoDB', 'Tailwind'].map((tag) => (
+        <span
+          key={tag}
+          className="text-[11px] px-3 py-1 rounded-full bg-orange-600/10 border border-orange-500/30 text-orange-200"
         >
-          <motion.div
-            className="relative w-full max-w-sm"
-            whileHover={{ scale: 1.02, translateY: -4 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-          >
-            {/* glow behind card */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-orange-500 via-red-500 to-orange-300 rounded-3xl blur-3xl opacity-60" />
+          {tag}
+        </span>
+      ))}
+    </div>
 
-            {/* glass card */}
-            <div className="relative rounded-3xl bg-white/5 border border-orange-500/30 backdrop-blur-xl p-6 sm:p-7 shadow-[0_0_60px_rgba(255,107,53,0.35)]">
-              {/* top: avatar + name */}
-              <div className="flex items-center gap-4 mb-5">
-                {/* avatar (replace with your image later) */}
-                <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center overflow-hidden">
-                  <span className="text-3xl sm:text-4xl">🧑‍💻</span>
-                </div>
+    {/* links */}
+    <div className="flex items-center gap-4 text-sm">
+      <a
+        href="#projects"
+        className="text-orange-300 hover:text-orange-100 transition-colors font-semibold"
+      >
+        View Work  
+      </a>
+      <a
+        href="#contact"
+        className="text-gray-300 hover:text-gray-200 transition-colors font-semibold"
+      >
+        Connect
+      </a>
+    </div>
+  </div>
+</motion.div>
 
-                <div>
-                  <h2 className="text-lg sm:text-xl font-bold text-white">
-                    Yash Shrivastava
-                  </h2>
-                  <p className="text-xs sm:text-sm text-orange-300 font-medium">
-                    MERN &nbsp;•&nbsp; AI-Powered SaaS
-                  </p>
-                </div>
-              </div>
-
-              {/* const developer snippet */}
-              <div className="mb-5">
-                <div className="rounded-xl bg-black/60 border border-orange-500/30 px-4 py-3">
-                  <code className="text-[11px] sm:text-xs font-mono text-orange-200">
-                    const developer = &#123;
-                    <br />
-                    &nbsp;&nbsp;name: &quot;Yash&quot;,
-                    <br />
-                    &nbsp;&nbsp;role: &quot;Full‑Stack Web Dev&quot;,
-                    <br />
-                    &nbsp;&nbsp;focus: [&quot;MERN&quot;, &quot;AI/ML&quot;, &quot;SaaS&quot;]
-                    <br />
-                    &#125;;
-                  </code>
-                </div>
-              </div>
-
-              {/* tags / highlights */}
-              <div className="mb-4 flex flex-wrap gap-2">
-                {['React', 'Node.js', 'MongoDB', 'Framer Motion', 'Tailwind'].map(
-                  (tag) => (
-                    <span
-                      key={tag}
-                      className="text-[10px] sm:text-xs px-3 py-1 rounded-full bg-orange-600/15 border border-orange-500/40 text-orange-200 font-mono"
-                    >
-                      {tag}
-                    </span>
-                  ),
-                )}
-              </div>
-
-              {/* small bio inside card */}
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">
-                Building smooth, animation-rich experiences and AI‑powered tools
-                that feel fast, focused, and delightful to use.
-              </p>
-
-              {/* mini actions */}
-              <div className="flex items-center justify-between gap-3">
-                <a
-                  href="#projects"
-                  className="text-[11px] sm:text-xs font-semibold text-orange-300 hover:text-orange-100 transition-colors"
-                >
-                  • View portfolio
-                </a>
-                <div className="flex gap-2 text-[13px]">
-                  <span className="w-7 h-7 rounded-full bg-orange-600/20 border border-orange-500/40 flex items-center justify-center text-orange-200">
-                    G
-                  </span>
-                  <span className="w-7 h-7 rounded-full bg-orange-600/20 border border-orange-500/40 flex items-center justify-center text-orange-200">
-                    in
-                  </span>
-                  <span className="w-7 h-7 rounded-full bg-orange-600/20 border border-orange-500/40 flex items-center justify-center text-orange-200">
-                    🐙
-                  </span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
       </motion.div>
 
-      {/* Scroll indicator at bottom of viewport */}
       <motion.div
         className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         animate={{ y: [0, 10, 0] }}

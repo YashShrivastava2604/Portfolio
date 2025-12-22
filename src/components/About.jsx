@@ -33,10 +33,8 @@ const About = () => {
                 and love integrating cutting-edge AI/ML models into web applications.
               </p>
               <p>
-                Currently, I'm working on Fitify, an AI-powered nutrition tracking app, while
-                exploring ways to build the next generation of monetizable SaaS products. When
-                I'm not coding, you'll find me debugging production issues, learning new frameworks,
-                or brainstorming the next big idea.
+                I'm a quick learner and thrive on challenges, constantly pushing myself to learn new
+                technologies and improve my skills.
               </p>
             </div>
 
@@ -75,7 +73,7 @@ const About = () => {
             <div className="relative bg-black/50 border border-orange-500/30 rounded-2xl p-8 backdrop-blur-sm">
               <pre className="text-orange-400 font-mono text-sm overflow-x-auto">
                 <code>{`const developer = {
-  name: "Your Name",
+  name: "Yash Shrivastava",
   location: "Indore, India",
   education: "CS Final Year",
   expertise: [
@@ -83,9 +81,7 @@ const About = () => {
     "Node.js",
     "MongoDB",
     "AI/ML Integration",
-    "UI Animations"
   ],
-  current_focus: "Fitify",
   looking_for: [
     "Full-stack roles",
     "Internships",
