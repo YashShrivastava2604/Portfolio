@@ -70,7 +70,7 @@ const ProjectModal = ({ project, onClose }) => {
                       key={i}
                       src={img}
                       alt={`${project.title} screenshot ${i + 1}`}
-                      className="w-full aspect-video object-cover rounded-2xl border border-orange-500/25"
+                      className="w-full aspect-video object-contain rounded-2xl border border-orange-500/25"
                     />
                   ))}
                 </div>
