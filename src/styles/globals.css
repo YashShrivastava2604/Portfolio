@@ -1,0 +1,85 @@
+/* globals.css – safe version */
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Only set base font + smooth scroll (no margin/padding reset here) */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Page background + text color + horizontal overflow */
+body {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a0f0a 50%, #0f0f0f 100%);
+  color: #F5F5F0;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling (visual only) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a0f0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6B35;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DC2F02;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #FF6B35;
+  color: #F5F5F0;
+}
+
+::-moz-selection {
+  background-color: #FF6B35;
+  color: #F5F5F0;
+}
+
+/* Global Animations (no layout impact) */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+  }
+}
+
+/* Utility Classes – use via className, not global elements */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #FF6B35 0%, #DC2F02 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+}
+
+/* No h1/h2 overrides here – Tailwind controls typography */

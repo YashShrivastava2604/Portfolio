@@ -1,0 +1,108 @@
+export const projects = [
+  {
+    id: 1,
+    title: 'Fitify',
+    shortDesc: 'AI-powered food nutrition tracking app',
+    fullDesc: `Fitify is a comprehensive nutrition tracking application that leverages AI/ML to recognize food items from images and provide detailed nutritional analysis. Built as a final-year project, it combines cutting-edge computer vision with a seamless user experience.`,
+    challenges: [
+      'Integrating ML models for accurate food recognition',
+      'Handling real-time nutrition data processing',
+      'Creating an intuitive UI for complex data',
+    ],
+    features: [
+      'Food recognition via image upload using TensorFlow',
+      'Real-time calorie and macro tracking',
+      'Personalized meal plans based on dietary goals',
+      'Social sharing and community features',
+      'Progress analytics and insights',
+    ],
+    tech: ['React', 'Node.js', 'MongoDB', 'TensorFlow', 'Cloudinary', 'Express'],
+    metrics: {
+      performance: '95%',
+      users: '500+',
+      accuracy: '92%',
+    },
+    images: [
+      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop',
+    ],
+    github: 'https://github.com',
+    live: 'https://fitify.vercel.app',
+    learnings: [
+      'Implementing ML pipelines in production',
+      'Optimizing image processing for web',
+      'Building scalable APIs',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Job Copilot',
+    shortDesc: 'Smart job aggregation & resume tailoring platform',
+    fullDesc: `Job Copilot is an intelligent job hunting assistant that aggregates listings from multiple platforms and automatically tailors your resume for each application. Saves hours of manual work for job seekers.`,
+    challenges: [
+      'Web scraping from multiple job boards',
+      'Resume parsing and modification',
+      'Handling large-scale job data',
+    ],
+    features: [
+      'Aggregates jobs from 10+ platforms',
+      'AI-powered resume customization',
+      'Application tracking and follow-up reminders',
+      'Job matching based on your profile',
+      'Interview prep resources',
+    ],
+    tech: ['React', 'Express', 'MongoDB', 'Puppeteer', 'Stripe'],
+    metrics: {
+      saved_hours: '50+',
+      success_rate: '40%',
+      jobs_tracked: '1000+',
+    },
+    images: [
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
+    ],
+    github: 'https://github.com',
+    live: 'https://jobcopilot.vercel.app',
+    learnings: [
+      'Web scraping best practices',
+      'Document processing',
+      'Job market analysis',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Imagify',
+    shortDesc: 'AI image editing with advanced processing',
+    fullDesc: `Imagify is a full-stack image editing platform powered by AI. Users can upload images, apply transformations, remove backgrounds, and use advanced filters—all in a beautiful, responsive interface.`,
+    challenges: [
+      'Real-time image processing',
+      'Handling large file uploads',
+      'Implementing payment system',
+    ],
+    features: [
+      'Background removal with AI',
+      'Real-time filters and effects',
+      'Image upscaling and enhancement',
+      'Batch processing capabilities',
+      'Cloud storage with Cloudinary',
+      'Stripe payment integration',
+    ],
+    tech: ['React', 'Node.js', 'Cloudinary', 'Stripe', 'MongoDB', 'Express'],
+    metrics: {
+      processing_speed: '2s avg',
+      users: '1000+',
+      images_processed: '50k+',
+    },
+    images: [
+      'https://images.unsplash.com/photo-1516321318423-f06f70674fb0?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&h=600&fit=crop',
+    ],
+    github: 'https://github.com',
+    live: 'https://imagify-ai.vercel.app',
+    learnings: [
+      'Image processing libraries',
+      'Payment gateway integration',
+      'File upload optimization',
+    ],
+  },
+];
