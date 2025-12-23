@@ -17,7 +17,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log(formData);
     setFormData({ name: '', email: '', message: '' });
   };
@@ -26,20 +25,20 @@ const Contact = () => {
     {
       icon: '📧',
       label: 'Email',
-      value: 'your.email@example.com',
-      link: 'mailto:your.email@example.com',
+      value: 'reach.yashshrivastava@gmail.com',
+      link: 'mailto:reach.yashshrivastava@gmail.com',
     },
     {
       icon: '💬',
       label: 'LinkedIn',
-      value: 'Your LinkedIn Profile',
-      link: 'https://linkedin.com/in/yourprofile',
+      value: 'Yash Shrivastava',
+      link: 'https://www.linkedin.com/in/yash-shrivastava-89a311322/',
     },
     {
       icon: '🐙',
       label: 'GitHub',
-      value: 'Your GitHub Profile',
-      link: 'https://github.com/yourprofile',
+      value: 'YashShrivastava2604',
+      link: 'https://github.com/YashShrivastava2604',
     },
   ];
 
@@ -68,6 +67,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
+        {/* Contact Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {contactMethods.map((method, i) => (
             <motion.a
@@ -87,7 +87,7 @@ const Contact = () => {
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
                   {method.label}
                 </h3>
-                <p className="text-gray-400 text-sm">{method.value}</p>
+                <p className="text-gray-400 text-sm break-all">{method.value}</p>
               </div>
             </motion.a>
           ))}
@@ -101,10 +101,22 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          {[
-            { name: 'GitHub', icon: '🐙', link: '#' },
-            { name: 'LinkedIn', icon: '💼', link: '#' },
-            { name: 'Twitter', icon: '𝕏', link: '#' },
+          {/* {[
+            {
+              name: 'GitHub',
+              icon: '🐙',
+              link: 'https://github.com/YashShrivastava2604',
+            },
+            {
+              name: 'LinkedIn',
+              icon: '💼',
+              link: 'https://www.linkedin.com/in/yash-shrivastava-89a311322/',
+            },
+            {
+              name: 'Twitter',
+              icon: '𝕏',
+              link: '#',
+            },
           ].map((social, i) => (
             <motion.a
               key={i}
@@ -114,13 +126,14 @@ const Contact = () => {
               className="w-12 h-12 rounded-full bg-orange-600/20 border border-orange-500/40 flex items-center justify-center text-xl hover:bg-orange-600/40 hover:border-orange-500/60 transition-all duration-300"
               whileHover={{ scale: 1.2, rotate: 12 }}
               whileTap={{ scale: 0.9 }}
+              aria-label={social.name}
             >
               {social.icon}
             </motion.a>
-          ))}
+          ))} */}
         </motion.div>
 
-        {/* CTA */}
+        {/* Footer note */}
         <motion.div
           className="text-center"
           initial={{ opacity: 0 }}
@@ -128,8 +141,8 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <p className="text-gray-500 text-sm mb-6">
-            © 2024 Your Name. Built with React, Framer Motion & ❤️
+          <p className="text-gray-500 text-sm">
+            {/* © {new Date().getFullYear()} Yash Shrivastava. Built with React & Framer Motion. */}
           </p>
         </motion.div>
       </div>
