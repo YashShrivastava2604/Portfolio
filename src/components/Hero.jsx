@@ -132,7 +132,7 @@ const Hero = () => {
 
     {/* tech chips */}
     <div className="flex flex-wrap gap-2 mb-6">
-      {['React', 'Node.js', 'MongoDB', 'Tailwind'].map((tag) => (
+      {['React', 'Node.js', 'MongoDB', 'Express', 'Javascript'].map((tag) => (
         <span
           key={tag}
           className="text-[11px] px-3 py-1 rounded-full bg-orange-600/10 border border-orange-500/30 text-orange-200"
